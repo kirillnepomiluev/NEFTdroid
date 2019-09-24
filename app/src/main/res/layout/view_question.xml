@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background">
+    <LinearLayout
+        android:id="@+id/question_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal">
+
+
+
+<TextView
+    android:id="@+id/question_text"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="4"
+    android:layout_marginLeft="8dp"
+    android:text="Вопрос"
+    android:textSize="23sp"
+    android:textStyle="bold"
+    android:gravity="center_vertical"/>
+
+    <ImageView
+        android:id="@+id/answer_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/icon_plus"
+        android:layout_gravity="center_vertical"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/answer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/question_layout"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/answer_text"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Ответ" />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

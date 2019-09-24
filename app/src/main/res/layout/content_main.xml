@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background"
+    android:id="@+id/main_layout">
+
+    <LinearLayout
+        android:id="@+id/menu_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/menu_btn"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            android:background="@color/background"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/menu" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textColor="#989898"
+            android:textSize="28sp"
+            android:text="@string/mwallet"/>
+
+        <ImageButton
+            android:id="@+id/notification_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="right|center_vertical"
+            android:background="@color/background"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/bell"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/balance_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menu_linear">
+
+        <TextView
+            android:id="@+id/paid_till"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/wallet_balance_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/wallet_balance"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_below="@id/paid_till"
+            />
+
+        <TextView
+            android:id="@+id/currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="NFT"
+            android:layout_below="@id/wallet_balance_tv"
+            android:layout_toLeftOf="@id/balance_tv"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/balance_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wallet_balance_tv"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:text=""/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/cards_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        android:background="@color/lightGray"
+        android:layout_below="@id/balance_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/top_up"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_background"
+                android:orientation="vertical"
+                android:clickable="true">
+
+                <ImageButton
+                    android:id="@+id/topUp_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2"
+                    android:background="@color/white"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/plus"
+                    android:clickable="false"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/top_up"
+                    android:textAlignment="center"
+                    android:clickable="false"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transfer_money"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_background"
+                android:orientation="vertical"
+                android:clickable="true">
+
+                <ImageButton
+                    android:id="@+id/transferMoney_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2"
+                    android:background="@color/white"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/transfer_money"
+                    android:clickable="false"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/transfer"
+                    android:textAlignment="center"
+                    android:clickable="false"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/withdrow"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_background"
+                android:orientation="vertical"
+                android:clickable="true">
+
+                <ImageButton
+                    android:id="@+id/withdrowMoney_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2"
+                    android:background="@color/white"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/withdraw"
+                    android:clickable="false"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/withdrow"
+                    android:textAlignment="center"
+                    android:clickable="false"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/friends"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_background"
+                android:orientation="vertical"
+                android:clickable="true">
+
+                <ImageButton
+                    android:id="@+id/friends_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2"
+                    android:background="@color/white"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/partners"
+                    android:clickable="false"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:text="@string/friends"
+                    android:textAlignment="center"
+                    android:clickable="false"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/gift_linear"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_background"
+                android:orientation="vertical"
+                android:clickable="true">
+
+                <ImageButton
+                    android:id="@+id/gift_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2"
+                    android:background="@color/white"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/present"
+                    android:clickable="false"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/gifts"
+                    android:textAlignment="center"
+                    android:clickable="false"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/map"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_background"
+                android:orientation="vertical"
+                android:clickable="true">
+
+                <ImageButton
+                    android:id="@+id/map_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="4"
+                    android:background="@color/white"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/map"
+                    android:clickable="false"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:text="@string/map"
+                    android:textAlignment="center"
+                    android:clickable="false"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/signout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/button_rectangle"
+        android:text="Выйти"
+        android:layout_below="@id/cards_layout"
+        android:layout_centerHorizontal="true"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    cardview:cardElevation="3dp"
+    cardview:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/itemlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:background="@color/lightGray">
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+             />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@id/thumbnail"/>
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_margin="8dp"
+            android:textSize="14sp"
+            android:layout_below="@id/title" />
+
+        <TextView
+            android:id="@+id/details"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/details_op"
+            android:layout_margin="8dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_below="@id/phone" />
+
+        <TextView
+            android:id="@+id/oper_id"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textIsSelectable="true"
+            android:layout_margin="8dp"
+            android:textSize="14sp"
+            android:layout_below="@id/phone" />
+
+        <TextView
+            android:id="@+id/sender_phone"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textIsSelectable="true"
+            android:layout_margin="8dp"
+            android:textSize="14sp"
+            android:layout_below="@id/oper_id" />
+
+        <TextView
+            android:id="@+id/sender_message"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_margin="8dp"
+            android:textSize="14sp"
+            android:layout_below="@id/sender_phone" />
+
+        <TextView
+            android:id="@+id/no_details"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/no_details_op"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_below="@id/sender_message" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightGray" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

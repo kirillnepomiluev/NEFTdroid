@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_action_home"
+            android:title="Главная" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_action_profile"
+            android:title="Профиль" />
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/ic_action_news"
+            android:title="Новости" />
+        <item
+            android:id="@+id/nav_ref"
+            android:icon="@drawable/ic_action_ref"
+            android:title="Пригласить друга" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_action_feedback"
+            android:title="Внести предложение" />
+        <item
+            android:id="@+id/nav_tarif"
+            android:icon="@drawable/ic_action_tarif"
+            android:title="Тариф" />
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/ic_action_faq"
+            android:title="FAQ" />
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/ic_action_chat"
+            android:title="Чат" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_action_settings"
+            android:title="Настройки" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_action_about"
+            android:title="О релизе" />
+        <item
+            android:id="@+id/nav_offer"
+            android:icon="@drawable/ic_action_offer"
+            android:title="Оферта" />
+        <item
+            android:id="@+id/nav_partners"
+            android:icon="@drawable/ic_action_partners"
+            android:title="Партнерская программа" />
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/ic_action_exit"
+            android:title="Выход" />
+
+
+    </group>
+
+
+</menu>

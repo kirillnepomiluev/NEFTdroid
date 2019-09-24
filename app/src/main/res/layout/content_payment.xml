@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".PaymentActivity"
+    tools:showIn="@layout/app_bar_payment"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.05"
+            android:text="@string/payment_method"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.15"
+            android:padding="8dp">
+
+            <Button
+                android:id="@+id/button_card"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/color_button"
+                android:drawableLeft="@drawable/ic_action_credit_card"
+                android:text="@string/bank_card" />
+
+            <Button
+                android:id="@+id/button_balance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/color_button"
+                android:drawableLeft="@drawable/ic_action_balance"
+                android:text="@string/from_balance" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/from_card"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_margin="8dp"
+                android:layout_weight="0.1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:src="@drawable/visa_icon"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:text="0000 0000 0000 0000"
+                    android:textSize="23dp"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.05"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_action_payment_card_nav" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/add_card_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="8dp"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/add_card"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/ic_action_payment_card_add" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:gravity="center_vertical" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:gravity="center_vertical"
+                        android:text="@string/add_new_card"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:text="@string/refill_summ"
+                    android:textAlignment="center"
+                    android:textSize="20sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="4dp"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/color_button"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ruble"
+                        android:textSize="12sp"/>
+
+
+                    <TextView
+                        android:id="@+id/summ_from_card"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="9"
+                        android:gravity="center"
+                        android:text="00.00"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:orientation="horizontal">
+                    <RadioGroup
+                        android:id="@+id/radio_card"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/refill_1m_card"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/color_button"
+                        android:text="@string/one_month"
+                        android:textSize="12sp"/>
+                    <RadioButton
+                        android:id="@+id/refill_3m_card"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/color_button"
+                        android:text="@string/three_months"
+                        android:textSize="12sp"/>
+                    <RadioButton
+                        android:id="@+id/refill_6m_card"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/color_button"
+                        android:text="@string/six_months"
+                        android:textSize="12sp"/>
+                    <RadioButton
+                        android:id="@+id/refill_1y_card"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/color_button"
+                        android:text="@string/one_year"
+                        android:textSize="12sp"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/from_balance"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="10"
+                android:text="@string/refill_summ"
+                android:textAlignment="center"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:layout_weight="15"
+                android:background="@drawable/color_button"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/cuple"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/summ_from_balance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.9"
+                    android:gravity="center"
+                    android:text="00.00"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="15"
+                android:orientation="horizontal">
+                <RadioGroup
+                    android:id="@+id/radio_balance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/refill_1m_balance"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/color_button"
+                    android:text="@string/one_month"
+                    android:textSize="12sp"/>
+                <RadioButton
+                    android:id="@+id/refill_3m_balance"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/color_button"
+                    android:text="@string/three_months"
+                    android:textSize="12sp"/>
+                <RadioButton
+                    android:id="@+id/refill_6m_balance"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/color_button"
+                    android:text="@string/six_months"
+                    android:textSize="12sp"/>
+                <RadioButton
+                    android:id="@+id/refill_1y_balance"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/color_button"
+                    android:text="@string/one_year"
+                    android:textSize="12sp"/>
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="10"
+                android:text="@string/curr_balance"
+                android:textAlignment="center"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/curr_balance"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="10"
+                android:background="@drawable/color_button"
+                android:gravity="center"
+                android:textSize="20sp"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/confirm_amount"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:layout_weight="0.1"
+            android:background="@drawable/color_button"
+            android:text="@string/next"
+            android:visibility="gone"
+            android:textSize="20sp"/>
+
+
+        <TextView
+            android:id="@+id/wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

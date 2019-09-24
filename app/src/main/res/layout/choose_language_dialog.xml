@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RadioButton
+        android:id="@+id/rb_rus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Русский" />
+
+    <RadioButton
+        android:id="@+id/rb_eng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rb_rus"
+        android:text="English" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rb_eng"
+        android:layout_centerInParent="true"
+        android:text="OK" />
+</RelativeLayout>

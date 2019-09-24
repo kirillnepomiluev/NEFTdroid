@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".signupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@id/layout_repeat_pin"
+        android:layout_marginBottom="32dp">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:src="@drawable/arrow_left"
+            android:scaleType="centerInside"
+            android:background="@color/background" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:text="@string/enter_pin"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="32dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_repeat_pin"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/rectangle_background">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="@string/repeat_pin"
+            android:textAlignment="center"
+            android:textSize="28sp"/>
+
+        <EditText
+            android:id="@+id/user_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:ems="4"
+
+            android:inputType="numberPassword"
+            android:textColor="@color/Gray"
+            style="@style/EditText.Login"
+            android:theme="@style/EditText.Login"/>
+
+
+        <Button
+            android:id="@+id/end_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/button_rectangle"
+            android:text="@string/end"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/step4"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="45dp"
+            android:textSize="28sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

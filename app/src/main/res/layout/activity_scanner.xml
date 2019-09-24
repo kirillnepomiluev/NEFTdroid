@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScannerActivity"
+    android:id="@+id/main_layout">
+
+    <LinearLayout
+        android:id="@+id/menu_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:background="@color/transparent">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            android:background="@color/transparent"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_left" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textColor="#989898"
+            android:textSize="28sp"
+            android:text="@string/qr_scanner"/>
+
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@color/transparent" />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/generate_qr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menu_linear">
+    <TextView
+        android:id="@+id/show_qr_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_qr"
+        android:textColor="@color/white"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"/>
+    <LinearLayout
+        android:layout_below="@id/show_qr_tv"
+        android:id="@+id/qr_code_linear"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rectangle_background">
+        <ImageView
+            android:id="@+id/qr_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/share_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_rectangle"
+        android:layout_below="@id/qr_code_linear"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/share_qr"
+        android:textColor="@color/white"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/my_qr_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_left_active"
+            android:text="Мой QR"
+            android:textColor="@color/white"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textSize="12sp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/qr_scanner_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_right"
+            android:text="QR-сканер"
+            android:textColor="@color/white"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textSize="12sp">
+
+        </Button>
+    </LinearLayout>
+
+
+</RelativeLayout>

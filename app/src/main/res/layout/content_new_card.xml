@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".NewCardActivity"
+    tools:showIn="@layout/activity_new_card">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:text="@string/card_number"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/card_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="18"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content"
+                android:text="@string/validity_card"
+                android:layout_gravity="center"
+                android:maxLength="4"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/month_year"
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:inputType="date"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal|top"
+                android:hint="../.." />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal|top"
+                android:text="CVV/CVC"
+                android:maxLength="3"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/cvc"
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:maxLength="3"
+                android:inputType="numberPassword"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal|top"
+                android:hint="..." />
+
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/buttonSaveCard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="0.05"
+            android:background="@drawable/color_button"
+            android:text="@string/save"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

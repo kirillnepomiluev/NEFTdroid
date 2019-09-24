@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".FriendsActivity">
+    <LinearLayout
+        android:id="@+id/menu_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/background">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            android:background="@color/background"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_left" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textColor="#989898"
+            android:textSize="28sp"
+            android:text="@string/friends"/>
+
+        <ImageButton
+            android:id="@+id/add_friend_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@color/background"
+            android:src="@drawable/ic_add_circle_black_24dp"
+            android:scaleType="centerCrop"
+            android:padding="7dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menu_linear"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="307dp"
+        android:text="К сожалению, \nу вас ещё нет \nни одного друга партнёра"
+        android:textAlignment="center"
+        android:textColor="@color/lightGray"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:id="@+id/friends_layout"
+        android:layout_below="@id/menu_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+        <TextView
+            android:id="@+id/not_active_friends_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="В этой категории \nнет ни одного \nдруга-партнера"
+            android:textAlignment="center"
+            android:textColor="@color/lightGray"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/friends_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </ScrollView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/active_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_left_active"
+            android:text="Активные"
+            android:textColor="@color/white"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textSize="12sp">
+
+        </Button>
+        <Button
+            android:id="@+id/not_active_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_right"
+            android:text="Неактивные"
+            android:textColor="@color/white"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textSize="12sp">
+
+        </Button>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".GiftsForMeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/arrow_left"
+                android:background="@color/background"
+                android:scaleType="centerInside"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:layout_gravity="center"
+                android:textColor="#989898"
+                android:textSize="28sp"
+                android:textAlignment="center"
+                android:text="Подарки"/>
+
+            <ImageButton
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:background="@color/background" />
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_background"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Категории"
+                android:textSize="20sp"
+                android:paddingTop="16dp"
+                android:paddingLeft="8dp"
+                android:textAlignment="center"
+                android:paddingBottom="16dp"
+                android:textColor="@color/white"
+                android:clickable="true" />
+            <TextView
+                android:id="@+id/for_me"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Для меня"
+                android:textSize="20sp"
+                android:paddingTop="16dp"
+                android:textAlignment="center"
+                android:paddingBottom="16dp"
+                android:textColor="@color/colorAccent"
+                android:clickable="true"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/from_me"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="От меня"
+                android:textSize="20sp"
+                android:paddingTop="16dp"
+                android:paddingRight="8dp"
+                android:textAlignment="center"
+                android:paddingBottom="16dp"
+                android:textColor="@color/white"
+                android:clickable="true"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/presents_for_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </LinearLayout>
+</ScrollView>

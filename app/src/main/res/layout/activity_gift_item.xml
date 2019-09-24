@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".GiftItemActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/menu_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/arrow_left"
+                android:background="@color/background"
+                android:scaleType="centerInside"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:layout_gravity="center"
+                android:textColor="#989898"
+                android:textSize="28sp"
+                android:textAlignment="center"
+                android:text="Подарки"/>
+
+            <ImageButton
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:background="@color/background" />
+
+
+
+
+        </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/card_gift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/rectangle_background"
+        android:layout_below="@id/menu_linear">
+
+        <ImageView
+            android:id="@+id/pic_gift"
+            android:layout_width="300dp"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"/>
+        <TextView
+            android:id="@+id/title_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:text="@string/sertificate_100"
+            android:textAlignment="center"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="16dp"
+            android:layout_below="@id/pic_gift"/>
+
+        <TextView
+            android:id="@+id/description_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_gift"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="11dp"
+            android:text="@string/description_gift"
+            android:textSize="23sp" />
+        <TextView
+            android:id="@+id/conditions_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/conditions_of_use"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:layout_below="@id/description_gift"/>
+        <TextView
+            android:id="@+id/conditions_of_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="23sp"
+            android:layout_below="@id/conditions_text"
+            android:paddingLeft="8dp"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:id="@+id/validity_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/validity"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:layout_below="@id/conditions_of_use"/>
+        <TextView
+            android:id="@+id/validity_gift_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textSize="23sp"
+            android:layout_toRightOf="@id/validity_text"
+            android:layout_below="@id/conditions_of_use"
+            android:paddingLeft="8dp"
+            android:layout_marginBottom="16dp"/>
+        <TextView
+            android:id="@+id/day_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/days"
+            android:textSize="23sp"
+            android:layout_toRightOf="@id/validity_gift_days"
+            android:layout_below="@id/conditions_of_use"
+            android:paddingLeft="8dp"
+            android:layout_marginBottom="16dp"/>
+
+
+        <TextView
+            android:id="@+id/validity_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/validity_txt"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:layout_below="@id/validity_text"/>
+        <TextView
+            android:id="@+id/validity_gift_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="12.10.2019"
+            android:textSize="23sp"
+            android:layout_toRightOf="@id/validity_gift"
+            android:layout_below="@id/validity_text"
+            android:paddingLeft="8dp"/>
+
+        <TextView
+            android:id="@+id/price_gift_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="Цена:"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:layout_below="@id/validity_gift"/>
+        <TextView
+            android:id="@+id/price_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/_100"
+            android:textSize="23sp"
+            android:layout_toRightOf="@id/price_gift_text"
+            android:layout_below="@id/validity_gift"
+            android:paddingLeft="8dp"
+            android:layout_marginBottom="16dp"/>
+        <TextView
+            android:id="@+id/currency_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/currency"
+            android:textSize="23sp"
+            android:layout_toRightOf="@id/price_gift"
+            android:layout_below="@id/validity_gift"
+            android:paddingLeft="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rectangle"
+            android:text="@string/next"
+            android:textSize="23sp"
+            android:textColor="@color/white"
+            android:layout_below="@id/price_gift_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:visibility="gone"/>
+
+
+
+
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/buy_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_below="@id/card_gift">
+
+
+        <EditText
+            android:id="@+id/editText_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:textSize="20sp"
+            android:background="@drawable/rectangle_background"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="+"
+            android:paddingTop="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:ems="20"
+            android:textColor="@color/Gray"/>
+
+            <CheckBox
+                android:id="@+id/gift_for_me_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText_phone"
+                android:text="Подарить себе"
+                android:textSize="20sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"/>
+
+
+            <EditText
+                android:id="@+id/receiver_name_ed"
+                android:layout_below="@id/gift_for_me_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textSize="20sp"
+                android:background="@drawable/rectangle_background"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:hint="@string/receiver_name"
+                android:textColorHint="@color/lightGray"
+                android:paddingTop="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp"
+                android:ems="20"
+                android:textColor="@color/Gray"/>
+
+            <EditText
+                android:id="@+id/comments_ed"
+                android:layout_below="@id/receiver_name_ed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textSize="20sp"
+                android:background="@drawable/rectangle_background"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:hint="@string/wishes"
+                android:textColorHint="@color/lightGray"
+                android:paddingTop="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp"
+                android:ems="20"
+                android:textColor="@color/Gray"/>
+            <RelativeLayout
+                android:layout_below="@id/comments_ed"
+                android:id="@+id/agree_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp">
+            <CheckBox
+                    android:id="@+id/send_on_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Отправить сертификат на Email"
+                    android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/agree"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:text="@string/agree"
+                android:textSize="20sp"
+                android:layout_below="@id/send_on_email"/>
+
+            <TextView
+                android:id="@+id/rules"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/agree"
+                android:layout_below="@id/send_on_email"
+                android:paddingLeft="8dp"
+                android:text="@string/rules"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/sometext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/agree"
+                    android:paddingLeft="8dp"
+                    android:text="покупки и испоьзования сертификата"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+            </RelativeLayout>
+    </RelativeLayout>
+        <Button
+            android:id="@+id/give_btn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rectangle"
+            android:text="@string/give"
+            android:textSize="23sp"
+            android:textColor="@color/white"
+            android:layout_below="@id/buy_info"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</ScrollView>

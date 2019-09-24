@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".verificationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/background" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/email_confirmation"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:paddingTop="8dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/end_btn"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_close_black_24dp"
+            android:background="@color/background"
+            android:layout_gravity="right"/>
+
+
+
+
+    </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/rectangle_background"
+       android:layout_marginTop="48dp"
+       android:layout_marginLeft="16dp"
+       android:layout_marginRight="16dp"
+       android:orientation="vertical">
+       <LinearLayout
+           android:id="@+id/enter_email_layout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Введите свой email"
+           android:gravity="center_horizontal"
+           android:layout_marginTop="32dp"
+           android:textSize="28sp" />
+       <EditText
+           android:id="@+id/email"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="16dp"
+           android:layout_gravity="center"
+           android:ems="15"
+           android:inputType="textEmailAddress"
+           android:textColor="@color/Gray"
+           android:imeOptions="actionNext"/>
+
+       <Button
+           android:id="@+id/check_email_btn"
+           android:layout_width="150dp"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="8dp"
+           android:layout_marginBottom="16dp"
+           android:background="@drawable/button_rectangle"
+           android:text="@string/check"
+           android:textColor="@android:color/white"/>
+       </LinearLayout>
+       <LinearLayout
+           android:id="@+id/confirmation_layout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:visibility="visible">
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/confirmation_info"
+           android:gravity="center_horizontal"
+           android:layout_marginTop="32dp"
+           android:layout_marginLeft="32dp"
+           android:layout_marginRight="32dp"
+           android:textSize="18sp" />
+           <TextView
+               android:id="@+id/email_text"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="mail@mail.ru"
+               android:gravity="center_horizontal"
+               android:layout_marginLeft="32dp"
+               android:layout_marginRight="32dp"
+               android:textSize="18sp" />
+
+       <EditText
+           android:id="@+id/code"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="16dp"
+           android:layout_gravity="center"
+           android:ems="10"
+           android:inputType="textEmailAddress"
+           android:textColor="@color/Gray"
+           android:imeOptions="actionSend"/>
+
+       <Button
+           android:id="@+id/confirmation_email_btn"
+           android:layout_width="150dp"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="8dp"
+           android:background="@drawable/button_rectangle"
+           android:text="@string/confirmation"
+           android:textColor="@android:color/white"/>
+           <TextView
+               android:id="@+id/send_again_tv"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="16dp"
+               android:layout_marginBottom="32dp"
+               android:layout_gravity="center_horizontal"
+               android:textStyle="bold"
+               android:text="Отправить код снова"/>
+       </LinearLayout>
+
+
+   </LinearLayout>
+</LinearLayout>
+
+
+

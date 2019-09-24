@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".FAQActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/menu_btn"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            android:background="@color/background"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/menu" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textColor="#989898"
+            android:textSize="28sp"
+            android:text="@string/faq"/>
+
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@color/background" />
+
+    </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/often_question"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/lightGray"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/question_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".verificationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:background="@color/background"
+            android:layout_gravity="left"
+            android:src="@drawable/arrow_left"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="4"
+            android:text="@string/verification"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:paddingTop="8dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/end_btn"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_close_black_24dp"
+            android:background="@color/background"
+            android:layout_gravity="right"/>
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:textAlignment="center"
+        android:text="@string/load_selfie"
+        android:textColor="@color/lightGray"
+        android:textSize="20sp"
+        android:layout_gravity="center"/>
+    <RelativeLayout
+        android:id="@+id/add_selfie_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rectangle_background"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp">
+        <ImageView
+            android:id="@+id/selfie_iv"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/selfie"
+            android:scaleType="centerCrop"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:padding="32dp"/>
+        <ImageButton
+            android:id="@+id/add_photo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_add_a_photo_black_24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="180dp"
+            android:background="@color/transparent"
+            android:scaleType="centerCrop"
+            android:clickable="false"/>
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:background="@drawable/button_rectangle"/>
+
+
+
+
+    <include
+        layout="@layout/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>
